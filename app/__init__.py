@@ -1,6 +1,10 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 from config import CONFIG
+
+# 创建SQLAlchemy对象
+db = SQLAlchemy()
 
 
 def create_app(config_name):
@@ -15,5 +19,8 @@ def create_app(config_name):
     
     # 注册蓝图
     app.register_blueprint(index_blu)
+    
+    # 对db进行配置
+    db.init_app(app)
     
     return app
