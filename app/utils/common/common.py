@@ -7,3 +7,6 @@ def show_index_colorful(index):
         return "third"
     else:
         return ""
+
+
+print('q')

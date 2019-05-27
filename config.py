@@ -6,8 +6,8 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:python@localhost:3306/flask_xjzx_2019?charset=utf8'
-    
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@localhost:3306/flask_1?charset=utf8'
+
 
 class ProductionConfig(Config):
     DEBUG = False

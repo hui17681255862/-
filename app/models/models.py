@@ -1,12 +1,10 @@
 from datetime import datetime
-
 from app import db
 
 
 class News(db.Model):
     """新闻"""
     __tablename__ = "news"
-
     id = db.Column(db.Integer, primary_key=True)  # 新闻编号
     title = db.Column(db.String(256), nullable=False)  # 新闻标题
     source = db.Column(db.String(64), nullable=False)  # 新闻来源
@@ -26,7 +24,6 @@ class News(db.Model):
 class Category(db.Model):
     """新闻分类"""
     __tablename__ = "category"
-
     id = db.Column(db.Integer, primary_key=True)  # 分类编号
     name = db.Column(db.String(64), nullable=False)  # 分类名
     create_time = db.Column(db.DateTime, default=datetime.now)  # 记录的创建时间
