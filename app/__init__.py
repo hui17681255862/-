@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 from config import CONFIG
+from app.utils.common.common import show_index_colorful
 
 # 创建SQLAlchemy对象
 db = SQLAlchemy()
@@ -22,5 +23,8 @@ def create_app(config_name):
     
     # 对db进行配置
     db.init_app(app)
+    
+    # 注册过滤器
+    app.add_template_filter(show_index_colorful, "show_index_colorful")
     
     return app
