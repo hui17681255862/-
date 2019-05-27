@@ -1,5 +1,6 @@
 from flask import render_template
 
+from app.models.models import News
 from . import index_blu
 
 
