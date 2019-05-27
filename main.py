@@ -9,5 +9,5 @@ def index():
     return "sdfsdf"
 
 
-if __name__ == '__main__':
-    app.run()
+# 运行flask应用程序
+app.run()
