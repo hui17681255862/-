@@ -16,3 +16,5 @@ if __name__ == '__main__':
     manager.add_command('db', MigrateCommand)
     # app.run()
     manager.run()
+
+pass
